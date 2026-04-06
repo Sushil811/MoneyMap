@@ -15,6 +15,6 @@
 
 5. For deployment, I used Infrastructure as Code (IaC). I wrote a render.yaml blueprint to define the entire cloud architecture for Render.com. This ensures that the frontend, backend, and environment variables are always synced and repeatable across different environments."
 
-6. The "Challenge & Solution" (The most common question)
-Interviewer: "What was the hardest part of building this?" Your Answer: "One challenge was ensuring that the charting components (Recharts) correctly reflected complex financial data across different time periods. I had to design custom backend aggregation pipelines in Mongoose to group income and expense data efficiently so the frontend could render its analytics in real-time without lagging."
+6. The "Challenge & Solution" 
+"One challenge was ensuring that the charting components (Recharts) correctly reflected complex financial data across different time periods. I had to design custom backend aggregation pipelines in Mongoose to group income and expense data efficiently so the frontend could render its analytics in real-time without lagging."
 
