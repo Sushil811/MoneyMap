@@ -3,14 +3,13 @@ import { useState, useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
 import Dashboard from './pages/Dashboard';
 import Income from './pages/Income';
 import Expense from './pages/Expense';
 import Goals from './pages/Goals';
 import Profile from './pages/Profile';
 import Budget from './pages/Budget';
+import ForgotPassword from './pages/ForgotPassword';
 import Layout from './componensts/Layout';
 import ProtectedRoute from './ProtectedRoute';
 
@@ -86,7 +85,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:token" element={<ResetPassword />} />
         
         <Route 
           path="/" 
