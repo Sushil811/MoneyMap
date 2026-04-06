@@ -69,6 +69,20 @@ class ApiService {
     });
   }
 
+  async forgotPassword(email) {
+    return this.request('/user/forgot-password', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    });
+  }
+
+  async resetPassword(token, password) {
+    return this.request(`/user/reset-password/${token}`, {
+      method: 'PUT',
+      body: JSON.stringify({ password }),
+    });
+  }
+
   // Dashboard endpoints
   async getDashboardOverview(params = {}) {
     const query = new URLSearchParams();
