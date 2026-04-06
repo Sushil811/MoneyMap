@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://moneymap-backend.onrender.com/api';
+const API_BASE_URL = 'https://moneymap.onrender.com/api';
 
 class ApiService {
   constructor() {
