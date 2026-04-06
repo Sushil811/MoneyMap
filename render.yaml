@@ -19,7 +19,7 @@ services:
                                                                                               - key: TOKEN_EXPIRES
                                                                                                       value: "24h"
                                                                                                             - key: FRONTEND_URL
-                                                                                                                    value: https://moneymap-frontend.onrender.com
+                                                                                                                    value: https://moneymap-frontend-e6oy.onrender.com
                                                                                                                     
                                                                                                                       # --- Frontend: Vite / React Static Site -------------------------
                                                                                                                         - type: static
