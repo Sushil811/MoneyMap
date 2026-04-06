@@ -8,7 +8,7 @@
 
 
 3. Key Highlight: "The Security First Approach"
-Mention these specific libraries to show you understand production risks:
+#Mention these specific libraries to show you understand production risks:
 
 "I didn't just build the logic; I built it securely. I implemented Helmet for CSP headers, Express-Mongo-Sanitize to prevent NoSQL injection, and used Bcrypt for hashing passwords. I also added Rate Limiting to prevent brute-force attacks on my Auth routes—which is essential for any real-world finance app."
 
