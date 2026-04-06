@@ -11,7 +11,6 @@ import budgetRouter from './routes/budgetRoute.js';
 import { authLimiter, apiLimiter } from './middleware/rateLimiter.js';
 import compression from 'compression'
 import helmet from 'helmet'
-import mongoSanitize from 'express-mongo-sanitize'
 import hpp from 'hpp'
 
 // Load environment variables
@@ -19,7 +18,6 @@ dotenv.config();
 
 const app = express();
 app.use(helmet({ contentSecurityPolicy: false })) // Basic security headers
-app.use(mongoSanitize()) // Prevent NoSQL Injection
 app.use(hpp()) // Prevent HTTP Parameter Pollution
 app.use(compression()) // Speed up responses
 
