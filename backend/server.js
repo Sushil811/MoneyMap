@@ -9,11 +9,15 @@ import dashboardRouter from './routes/dashboardRoute.js';
 import goalRouter from './routes/goalRoute.js';
 import budgetRouter from './routes/budgetRoute.js';
 import { authLimiter, apiLimiter } from './middleware/rateLimiter.js';
+import compression from 'compression'
+import helmet from 'helmet'
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
+app.use(helmet({ contentSecurityPolicy: false })) // Basic security, disabled CSP to prevent frontend issues
+app.use(compression()) // ZIP backend responses
 
 const PORT = process.env.PORT || 3000
 
