@@ -1,38 +1,30 @@
 services:
-  # ─── Backend: Node.js / Express API ───────────────────────────────────────
-  - type: web
-    name: moneymap-backend
-    runtime: node
-    rootDir: backend
-    buildCommand: npm install
-    startCommand: npm start
-    envVars:
-      - key: PORT
-        value: 3000
-      - key: NODE_ENV
-        value: production
-      - key: MONGO_URI
-        sync: false          # Set this in Render dashboard (secret)
-      - key: JWT_SECRET_KEY
-        sync: false          # Set this in Render dashboard (secret)
-      - key: TOKEN_EXPIRES
-        value: "24h"
-      - key: FRONTEND_URL
-        value: https://moneymap-frontend.onrender.com  # Update if your static site name differs
-
-  # ─── Frontend: Vite / React Static Site ───────────────────────────────────
-  - type: web
-    name: moneymap-frontend
-    runtime: static
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    pullRequestPreviewsEnabled: false
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: no-cache
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+  # --- Backend: Node.js / Express API ------------------------------
+    - type: web
+        name: moneymap-backend
+            plan: free
+                runtime: node
+                    rootDir: backend
+                        buildCommand: npm install
+                            startCommand: npm start
+                                envVars:
+                                      - key: PORT
+                                              value: 3000
+                                                    - key: NODE_ENV
+                                                            value: production
+                                                                  - key: MONGO_URI
+                                                                          sync: false
+                                                                                - key: JWT_SECRET_KEY
+                                                                                        sync: false
+                                                                                              - key: TOKEN_EXPIRES
+                                                                                                      value: "24h"
+                                                                                                            - key: FRONTEND_URL
+                                                                                                                    value: https://moneymap-frontend.onrender.com
+                                                                                                                    
+                                                                                                                      # --- Frontend: Vite / React Static Site -------------------------
+                                                                                                                        - type: static
+                                                                                                                            name: moneymap-frontend
+                                                                                                                                rootDir: frontend
+                                                                                                                                    buildCommand: npm install && npm run build
+                                                                                                                                        staticPublishPath: dist
+                                                                                                                                        
